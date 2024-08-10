@@ -1,0 +1,223 @@
+/* Estilos adicionales para códigos repetidos */
+.yellow-bg {
+    background-color: #ffc107; /* Amarillo */
+}
+
+.red-bg {
+    background-color: #dc3545; /* Rojo */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+input {
+    width: calc(100% - 60px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#counter {
+    font-size: 20px;
+    color: #333;
+}
+
+#lastCodeContainer {
+    margin: 10px 0;
+}
+
+#lastCode {
+    font-size: 16px;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    background-color: #f8f8f8;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #eaeaea;
+}
+
+button.deleteCode {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button.deleteCode:hover {
+    background-color: #c82333;
+}
+
+#pagination {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#pagination button {
+    background-color: #007bff;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#pagination button:hover:not(:disabled) {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#pagination i {
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.buttons button {
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons button#generateExcel {
+    background-color: #28a745; /* Verde */
+}
+
+.buttons button#generateExcel:hover {
+    background-color: #218838;
+}
+
+.buttons button#generatePDF {
+    background-color: #dc3545; /* Rojo */
+}
+
+.buttons button#generatePDF:hover {
+    background-color: #c82333;
+}
+
+.buttons button#clearCodes {
+    background-color: #ffc107; /* Amarillo */
+}
+
+.buttons button#clearCodes:hover {
+    background-color: #e0a800;
+}
+
+.buttons button#goToSelection {
+    background-color: #007bff; /* Azul */
+}
+
+.buttons button#goToSelection:hover {
+    background-color: #0056b3;
+}
+
+.buttons i {
+    font-size: 20px;
+}
+
+/* Estilos para la página de selección */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    .buttons button {
+        width: 48%;
+    }
+}

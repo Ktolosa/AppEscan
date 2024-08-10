@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escanear Guías</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</head>
+<body>
+    <div class="container" id="scanPage">
+        <h1>Escanear Guías</h1>
+        <div class="input-container">
+            <input type="text" id="codeInput" placeholder="Escanea o escribe tu guía aquí" aria-label="Campo para ingresar guía">
+            <span id="counter">0</span>
+        </div>
+        <div id="lastCodeContainer">
+            <strong>Última guía escaneada:</strong>
+            <p id="lastCode">N/A</p>
+        </div>
+        <ul id="codeList"></ul>
+        <div id="pagination">
+            <button id="firstPage" onclick="goToPage(1)" title="Primera Página" aria-label="Primera Página"><i class="fas fa-angle-double-left"></i></button>
+            <button id="prevPage" onclick="changePage(-1)" title="Página Anterior" aria-label="Página Anterior"><i class="fas fa-angle-left"></i></button>
+            <span id="pageInfo">Página 1 de 1</span>
+            <button id="nextPage" onclick="changePage(1)" title="Página Siguiente" aria-label="Página Siguiente"><i class="fas fa-angle-right"></i></button>
+            <button id="lastPage" onclick="goToPage(totalPages)" title="Última Página" aria-label="Última Página"><i class="fas fa-angle-double-right"></i></button>
+        </div>
+        <div class="buttons">
+            <button id="generateExcel" aria-label="Generar Excel"><i class="fas fa-file-excel"></i></button>
+            <button id="generatePDF" aria-label="Generar PDF"><i class="fas fa-file-pdf"></i></button>
+            <button id="clearCodes" aria-label="Borrar Códigos"><i class="fas fa-trash"></i></button>
+            <button id="goToSelection" aria-label="Regresar a la selección"><i class="fas fa-home"></i></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona la Empresa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Selecciona una Empresa</h1>
+        <select id="companySelect" onchange="selectCompany()">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="UPS">UPS</option>
+            <option value="DHL">DHL</option>
+            <option value="IBC">IBC</option>
+            <option value="MLA">MailAmericas</option>
+        </select>
+    </div>
+    <script>
+        function selectCompany() {
+            const selectedCompany = document.getElementById('companySelect').value;
+            if (selectedCompany) {
+                localStorage.setItem('selectedCompany', selectedCompany);
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+</html>
